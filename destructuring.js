@@ -22,6 +22,7 @@ var carDetails = {
   */
 
 //Code Here
+let {color, make, model, year} = carDetails;
 
 
 
@@ -33,21 +34,25 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) = ()
-  //Code Here
+
+  
   
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
-  // Do not edit the code above.
-}
+  function greeting( obj ) {
+    //Code Here
+  let {firstName, lastName, title} = obj;
+    // Do not edit the code below.
+    return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+    // Do not edit the code above.
+  }
+  
+
 
 
 
 ////////// PROBLEM 3 //////////
 
-let newVar =greeting.map(function,(element){
-  return element;
-}/*
+/*
   Write a function called totalPopulation that will take in an object.
   That object will have 4 properties named utah, california, texas and arizona.
   The property values will be numbers.
@@ -56,7 +61,10 @@ let newVar =greeting.map(function,(element){
 */
 
 //Code Here
-
+function totalPopulation (obj){
+  let {utah, california, texas, arizona} = obj;
+  return utah + california + texas + arizona;
+}
 
 
 ////////// PROBLEM 4 //////////
@@ -71,7 +79,10 @@ let newVar =greeting.map(function,(element){
 
 //Code Here
 
-
+function ingredients (obj) {
+  let {carb, fat, protein} = obj;
+  return [carb, fat, protein]
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -88,6 +99,9 @@ let newVar =greeting.map(function,(element){
 */
 
 //Code Here
+function largeNumbers({first, second, third}){
+  return Math.min(first, second, third);
+}
 
 
 
@@ -100,5 +114,15 @@ let newVar =greeting.map(function,(element){
 */
 
 //Code Here
-
+function numberGroups({a,b,c}){
+  if(a.length > b.length && a.length > c.length){
+    return a;
+  }
+  else if (b.length > c.length){
+    return b;
+  }
+   else {
+      return c;
+}
+}
 
