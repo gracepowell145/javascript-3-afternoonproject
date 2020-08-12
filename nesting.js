@@ -50,17 +50,28 @@ var employees = [
     3. Return the updated employee array.
 */
 
+
+////Code Here
 const employeeUpdater = () => {
   let filteredEmployees = employees.filter(e => e.firstName !== 'Theo')
-  let mappedEmoplyees = filteredEmplyees.map(e => {
+  let mappedEmployees = filteredEmplyees.map(e => {
     if(e.firstname === 'Lorie'){
       e.department = 'HR'
     }
     return e 
   })
-  return mapedEmployees
-}//Code Here
+  return mappedEmployees
+}
 
+
+
+// function employeeUpdater(){
+//   for (let i=0; i<employees.length; i++){
+//     if (employee[i]['firstName'] === 'Theo')
+//     return delete employee[i]
+//   }else (employee[i]['firstName'=== 'Lorie'])
+//     return 
+// }
 
 
 ////////// PROBLEM 2 //////////
@@ -77,19 +88,33 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-const removeDuplicates = () => {
-for (let i=0; i<workplaceAccidents.length; i++) {
-  // console.log(workplaceAccidents[i]);
-  for (let j = i + 1; j < workplaceAccidents.length; j++) {
-    // console.log(workplaceAccidents[i]); workplaceAccidents[j]);
-    if (workplaceAccidents[i] = workplaceAccidents [j]);{
-      workplaceAccidents.splice(i, 1)
+
+//Code Here
+function removeDuplicates(workplaceAccidents){
+  for (let i=0; i<workplaceAccidents.length; i++) {
+    for (let j = i + 1; j < workplaceAccidents.length; j++) {
+      if (workplaceAccidents[i] = workplaceAccidents [j]);{
+        workplaceAccidents.splice(i, 1);
+        i--;
+      }
     }
   }
-}
   return workplaceAccidents
-}//Code Here
+}
 
+
+// const removeDuplicates = () => {
+//   for (let i=0; i<workplaceAccidents.length; i++) {
+//     // console.log(workplaceAccidents[i]);
+//     for (let j = i + 1; j < workplaceAccidents.length; j++) {
+//       // console.log(workplaceAccidents[i]); workplaceAccidents[j]);
+//       if (workplaceAccidents[i] = workplaceAccidents [j]);{
+//         workplaceAccidents.splice(i, 1)
+//       }
+//     }
+//   }
+//     return workplaceAccidents
+// }
 
 
 ////////// PROBLEM 3 //////////
@@ -117,8 +142,9 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+let grumpyActivity = cat.catFriends[0].activities[1];
+let fluffy2ndFriend = cat.catFriends[1].name;
+grumpyActivity;
 
 
 
@@ -159,6 +185,14 @@ var myCar = {
 */
 
 //Code Here
+//  function recordCleaner() {
+//    for (let i = 0; i < myCar.length; i++){
+//      if (atFaultForAccident[i] === 'true'){
+//        atFaultForAccident[i] = 'false';
+//      }
+//    }
+//   }
+ 
 
 
 
@@ -177,12 +211,17 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
     4. Return the modified numsArr.
 */
 
+////Code Here
 function looper(){
-  for(i = 0; i<numsArr.length; i++){
-    if(numsArr[i] %2===0){
-      numsArr[i] = 'even' {
-        else  numsArr[1] = 'odd') 
+  for(let i = 0; i<numsArr.length; i++){
+    for (let j=0; j<numsArr.length; j++){
+     if(numsArr[i][j] % 2 !== 0 ){
+      numsArr[i] [j] = 'odd'; 
+     } else {
+        numsArr[i][j]='even'
       }
     }
+  }
     return numsArr;
-  }//Code Here
+}
+
